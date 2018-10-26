@@ -1,19 +1,17 @@
 package com.brunoallison.challenge.api.models;
 
-import java.text.DecimalFormat;
-
 public class ICMS {
-	
+
 	private Double baseDeCalculo;
 	private Double fatorDeReducaoDaBaseDeCalculo;
 	private Double aliquota;
 	private Double valorICMS;
 
 	public ICMS() {
-		
+
 	}
-	
-	public void calculaBaseDeCalculo (Double valorItens) {
+
+	public void calculaBaseDeCalculo(Double valorItens) {
 		Double reducao = (valorItens * this.fatorDeReducaoDaBaseDeCalculo) / 100;
 		this.baseDeCalculo = valorItens - reducao;
 	}
@@ -21,18 +19,9 @@ public class ICMS {
 	public void calculaValorICMS(Double valorItens) {
 		this.valorICMS = (this.aliquota * this.baseDeCalculo) / 100;
 	}
-	
-	public Double formataDecimal(Double valor) {
-		DecimalFormat df = new DecimalFormat("0.##");
-		
-		String novoValorString = df.format(valor);
-		Double novoValorDouble = Double.parseDouble(novoValorString.replaceAll(",", "."));
-		
-		return novoValorDouble;
-	}
 
 	public Double getBaseDeCalculo() {
-		return formataDecimal(baseDeCalculo);
+		return Helpers.formataDecimalParaDuasCasas(baseDeCalculo);
 	}
 
 	public void setBaseDeCalculo(Double baseDeCalculo) {
@@ -56,7 +45,7 @@ public class ICMS {
 	}
 
 	public Double getValorICMS() {
-		return formataDecimal(valorICMS);
+		return Helpers.formataDecimalParaDuasCasas(valorICMS);
 	}
 
 	public void setValorICMS(Double valorICMS) {
