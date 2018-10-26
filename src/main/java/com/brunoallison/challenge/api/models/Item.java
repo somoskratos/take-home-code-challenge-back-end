@@ -8,10 +8,6 @@ public class Item {
 	private Tributos tributos;
 	
 	public Item() {
-		super();
-	}
-
-	public void calculaICMS() {
 		
 	}
 	

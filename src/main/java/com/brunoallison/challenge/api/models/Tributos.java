@@ -1,12 +1,15 @@
 package com.brunoallison.challenge.api.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Tributos {
 	private ICMS icms;
 
 	public Tributos() {
-		super();
+		
 	}
 
+	@JsonProperty("ICMS")
 	public ICMS getIcms() {
 		return icms;
 	}
