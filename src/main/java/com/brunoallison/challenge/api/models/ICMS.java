@@ -3,6 +3,7 @@ package com.brunoallison.challenge.api.models;
 import java.text.DecimalFormat;
 
 public class ICMS {
+	
 	private Double baseDeCalculo;
 	private Double fatorDeReducaoDaBaseDeCalculo;
 	private Double aliquota;

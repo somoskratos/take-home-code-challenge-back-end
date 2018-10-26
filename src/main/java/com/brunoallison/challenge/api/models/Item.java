@@ -1,6 +1,7 @@
 package com.brunoallison.challenge.api.models;
 
 public class Item {
+	
 	private String codigo;
 	private String descricao;
 	private Double valorUnitario;
