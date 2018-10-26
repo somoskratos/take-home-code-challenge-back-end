@@ -14,11 +14,11 @@ public class ICMS {
 	
 	public void calculaBaseDeCalculo (Double valorItens) {
 		Double reducao = (valorItens * this.fatorDeReducaoDaBaseDeCalculo) / 100;
-        this.baseDeCalculo = valorItens - reducao;
+		this.baseDeCalculo = valorItens - reducao;
 	}
 
 	public void calculaValorICMS(Double valorItens) {
-        this.valorICMS = (this.aliquota * this.baseDeCalculo) / 100;
+		this.valorICMS = (this.aliquota * this.baseDeCalculo) / 100;
 	}
 	
 	public Double formataDecimal(Double valor) {
